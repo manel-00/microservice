@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Gateway (1) (com.esprit.microservice)" />
+        <module name="Gateway (2) (com.example)" />
+        <module name="eureka" />
+        <module name="loan-service" />
+        <module name="seance2eureka" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Gateway" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Gateway" options="-parameters" />
+      <module name="Gateway (1) (com.esprit.microservice)" options="-parameters" />
+      <module name="Gateway (2) (com.example)" options="-parameters" />
+      <module name="eureka" options="-parameters" />
+      <module name="loan-service" options="-parameters" />
+      <module name="seance2eureka" options="-parameters" />
+    </option>
+  </component>
+</project>
