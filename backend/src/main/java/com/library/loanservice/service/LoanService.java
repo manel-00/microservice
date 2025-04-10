@@ -42,6 +42,20 @@ public class LoanService {
         loan.setId(existingLoan.getId());
         return loanRepository.save(loan);
     }
+
+     public double calculateFine(Loan loan) {
+        // Example fine calculation logic
+        LocalDate returnDate = loan.getReturnDate();
+        LocalDate dueDate = loan.getDueDate();
+
+        if (returnDate != null && returnDate.isAfter(dueDate)) {
+            // Calculate fine, for example $1 per day late
+            long daysLate = java.time.temporal.ChronoUnit.DAYS.between(dueDate, returnDate);
+            return daysLate * 1.0;  // Fine amount calculation logic
+        }
+        return 0.0;  // No fine if returned on time
+    }
+
     
     @Transactional
     public void deleteLoan(Long id) {
